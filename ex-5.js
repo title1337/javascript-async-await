@@ -5,10 +5,18 @@ let getJohnProfile = () => {
       () =>
         reject({
           errorCode: 500,
-          message: "👿 Failed to request data from server",
+          message: '👿 Failed to request data from server',
         }),
-      2000
+      2000,
     );
   });
 };
-// Start coding here
+async function asynconousFunction() {
+  try {
+    const johnProfile = await getJohnProfile();
+    console.log(johnProfile);
+  } catch (errorCode) {
+    console.log(errorCode);
+  }
+}
+asynconousFunction();
