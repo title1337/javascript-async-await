@@ -5,12 +5,16 @@ let getJohnProfile = () => {
     setTimeout(
       () =>
         resolve({
-          name: "John",
+          name: 'John',
           age: 20,
-          hobbies: ["Coding", "Football"],
+          hobbies: ['Coding', 'Football'],
         }),
-      1000
+      1000,
     );
   });
 };
-// Start coding here
+
+function getRecData(data) {
+  console.log(data);
+}
+getJohnProfile().then(getRecData);
