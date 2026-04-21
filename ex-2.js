@@ -5,11 +5,17 @@ let getJohnProfile = () => {
       () =>
         reject({
           errorCode: 500,
-          message: "👿 Failed to request data from server",
+          message: '👿 Failed to request data from server',
         }),
-      2000
+      2000,
     );
   });
 };
 
-// Start coding here
+function displayData(data) {
+  console.log(data);
+}
+function displayError(error) {
+  console.log(error);
+}
+getJohnProfile().then(displayData).catch(displayError);
